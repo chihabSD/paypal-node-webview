@@ -1,14 +1,68 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h>Paypal</h>
-    <form action="/paypal">
-        <button  type="submit"> Pay</button>
+    <body>
+    <h1 class="h1">Please wait .... </h1>
+    <form id="paypalForm" name="paypalForm" action="/paypal">
     </form>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #f8f8f8;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="loader">
+
+<form id="paypalForm" name="paypalForm" action="/paypal">
+    <!-- <button  type="submit"> Pay</button> -->
+</form>
+</div>
 </body>
 </html>
